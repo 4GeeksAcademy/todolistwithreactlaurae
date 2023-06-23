@@ -14,8 +14,28 @@
     color: rgba(red, green, rgb(92, 92, 129), 0)
 
 }
-.estiloLista{
-    width: 50%;
+.listaDeTareas{
+    display: flex;
+}
+.ol{
+    width: 30%;
     margin:auto;
     margin-top:30px
+}
+#li{
+    display: flex;
+   float: left;
+    align-items: center;
+    padding: none;
+    width:400px;
+}
+.botonCerrar{
+    display: flex;
+   float: right;
+   align-items: center;
+   color:white;
+}
+.botonCerrar:hover{
+    color:brown;
+    
 }

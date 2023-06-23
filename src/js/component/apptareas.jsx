@@ -13,17 +13,14 @@ const AppTareas = () => {
             if(e.key === 'Enter') {
                  console.log(tarea)
                setListaTareas(listaTareas.concat(tarea));
-               <ul> {listaTareas.map((task) => (
-                    <li key={task.id}>{task.text}</li>
-                    ))}</ul>
-
-            }        
-            //     nuevaTarea= tarea.map(value,index,array){
-            //         return <li key={index}>{value}</li>
-            //     }
-            //   }
-        }
-        console.log(listaTareas)
+               setTarea("")
+               
+        }}
+        const itemDelete = (index) => {
+            const newArr = listaTareas.filter((param, i) => i !== index);
+            setListaTareas(newArr);
+          };
+           
         return (
             <div className="container">
             <p className="">todos</p>
@@ -33,7 +30,13 @@ const AppTareas = () => {
                 className=""
                 placeholder="What needs to be done?"
                 onKeyDown={eventEnter}
+                value={tarea}
             />
+            <div className="listaDeTareas">
+                <ol className="ol list-group list-group-flush estiloLista"> {listaTareas.map((task,index) => (
+                    <li key={index} className="list-group-item" id="li">{task}<button type="button" className="btn-close botonCerrar"  onClick={() =>itemDelete(index)}></button></li>
+                    ))}</ol> 
+            </div> 
             </div>
         );
         };
