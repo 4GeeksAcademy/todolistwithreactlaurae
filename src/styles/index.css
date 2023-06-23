@@ -8,5 +8,14 @@
     other sylesheets into your bunde as well, e.j:
     
     import 'relative/path/to/stylesheet.scss';
-
 */
+.tituloTodos{
+    font-size: 100px;
+    color: rgba(red, green, rgb(92, 92, 129), 0)
+
+}
+.estiloLista{
+    width: 50%;
+    margin:auto;
+    margin-top:30px
+}
