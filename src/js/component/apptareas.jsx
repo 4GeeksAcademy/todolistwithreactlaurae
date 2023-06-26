@@ -23,7 +23,7 @@ const AppTareas = () => {
            
         return (
             <div className="container">
-            <p className="">todos</p>
+            <p className="">Lista de tareas</p>
             <input
                 type="text"
                 onChange={addTarea}
@@ -33,9 +33,12 @@ const AppTareas = () => {
                 value={tarea}
             />
             <div className="listaDeTareas">
-                <ol className="ol list-group list-group-flush estiloLista"> {listaTareas.map((task,index) => (
-                    <li key={index} className="list-group-item" id="li">{task}<button type="button" className="btn-close botonCerrar"  onClick={() =>itemDelete(index)}></button></li>
-                    ))}</ol> 
+                <ol className="ol list-group list-group-flush estiloLista">
+                  {listaTareas.map((task,index) => (
+                    <li key={index} className="list-group-item li" >{`${task ==="" ? "No hay tareas pendientes" : task}`}<span className="span" onClick={() =>itemDelete(index)}>X</span></li>
+                    ))}
+                </ol>
+                <p className="tareasPendientes">{`${listaTareas.length ===0 ? "No item left" : listaTareas.length+" item left"}`}</p> 
             </div> 
             </div>
         );

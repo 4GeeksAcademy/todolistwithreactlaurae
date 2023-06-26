@@ -9,33 +9,56 @@
     
     import 'relative/path/to/stylesheet.scss';
 */
+body{
+    background-color: rgb(147, 163, 163);
+    font-family: 'Caprasimo', cursive;
+}
+p{
+    padding-top: 20px;
+    font-weight:800;
+    font-size: 30px;
+    color: rgb(17, 61, 63);
+}
+
 .tituloTodos{
     font-size: 100px;
     color: rgba(red, green, rgb(92, 92, 129), 0)
 
 }
 .listaDeTareas{
-    display: flex;
+   
+    width: 400px;
+
+    margin: auto;
+    background-color:  rgb(147, 163, 163);
 }
 .ol{
     width: 30%;
     margin:auto;
-    margin-top:30px
+    margin-top:30px;
 }
-#li{
-    display: flex;
-   float: left;
-    align-items: center;
-    padding: none;
-    width:400px;
-}
-.botonCerrar{
+
+span{
     display: flex;
    float: right;
    align-items: center;
-   color:white;
+   color: rgb(147, 163, 163);
+   font-style: italic;
+   font-weight: bolder;  
+ 
 }
-.botonCerrar:hover{
-    color:brown;
-    
+.li{
+    border: none;
+    background-color: rgb(147, 163, 163) ;
+}
+.li:hover .span{
+    color:rgb(15, 4, 66);
+}
+input{
+    border:none;
+    border-radius: 10px;
+    padding: 10px;
+}
+.tareasPendientes{
+    font-size: small;
 }
